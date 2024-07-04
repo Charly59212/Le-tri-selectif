@@ -1,0 +1,357 @@
+/*Style global / Global style*/
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    background-color: #548d4a;
+}
+
+#design {
+    padding: 10px;
+    background-color: #106900;
+}
+
+/*Titre et sous-titre / Title & sub-title*/
+h1 {
+    font-size: 40px;
+    color: rgb(61, 226, 152);
+    border: 1px solid rgb(5, 5, 5);
+    background-color: #1d8636;
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+}
+
+h2 {
+    font-size: 18px;
+    color: rgb(218, 206, 206);
+}
+
+/*Style des écrans de jeu/résultat / Screen grame/result style*/
+#first-screen,
+#second-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 92.5vh;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#dechets-list {
+    width: 90%;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+
+#dechets-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 120px;
+    padding: 15px;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+    color: #114b1e;
+    background-color: rgb(170, 187, 179);
+    background-image: url(icons/dechet.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #000;
+    border-radius: 30%;
+}
+
+/*Animation affichage des déchets / Display dechet animation*/
+
+#dechets-name {
+    animation-duration: 2.5s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+
+@keyframes clignoter {
+    0% {
+        opacity: 0.5;
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/*Design des poubelles / garbage can design*/
+
+#poubelles-name {
+    display: flex;
+    justify-content: center;
+}
+
+.poubelle {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.poubelle-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    box-shadow: 0 0 0 0 rgba(255, 71, 84, .7);
+    animation: battement 2s infinite cubic-bezier(.66, 0, 0, 1);
+}
+
+#choice {
+    color: rgb(190, 235, 220);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#number1,
+#number2,
+#number3,
+#number4 {
+    animation: bounce 1s ease infinite alternate;
+}
+
+#number1 {
+    background-color: #E0D42B;
+}
+
+#number2 {
+    background-color: #0B2E13;
+}
+
+#number3 {
+    background-color: #16193D;
+}
+
+#number4 {
+    background-color: #69471E;
+}
+
+/*Animation pour les poubelles / Garbage can animation*/
+
+.poubelle:hover {
+    opacity: 0.6;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.poubelle img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/*Résultat du joueur écran 1 / First screen user result*/
+
+.result-text {
+    font-size: 16px;
+}
+
+#result {
+    font-size: 25px;
+}
+
+.correct {
+    color: rgb(95, 226, 95);
+    font-weight: bolder;
+}
+
+.incorrect {
+    color: rgb(255, 166, 1);
+    font-weight: bolder;
+}
+
+#score {
+    color: antiquewhite;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*Second écran des résultats / Second screen user result*/
+
+/*Body*/
+#second-screen {
+    display: none;
+    height: 95vh;
+}
+
+/*Divs des résultats/ Result divs*/
+#result-final {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: rgb(61, 31, 20);
+}
+
+/*Texte des résultats / Result text*/
+.result-detail {
+    margin: 5px;
+    border: 2px solid #4d4343;
+    box-shadow: 1px 1px 2px 2px white;
+    background-color: #33692a;
+    width: 30%;
+    height: 100px;
+}
+
+.result-detail p {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 7px;
+}
+
+/*Score final / Final score*/
+#score-final {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: rgb(104, 224, 170);
+}
+
+/*Bouton redémarrer / Restart button*/
+
+#restart-btn {
+    width: 200px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #43cc63;
+    border: none;
+    color: rgb(250, 0, 0);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/*Animation pour le bouton / Button animation*/
+#restart-btn {
+    animation-duration: 1.5s;
+    animation-name: clignoter;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+
+@keyframes clignoter {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*-----Media queries smartphone-------*/
+
+@media (max-width:576px) {
+
+    /*Design global*/
+    #design {
+        padding: 2px;
+    }
+
+    #first-screen,
+    #second-screen {
+        height: 96.5vh;
+    }
+
+    /*Titre et sous-titre / Title & sub-title*/
+    h1 {
+        font-size: 25px;
+        width: 75%;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+    /*Déchets*/
+    #dechets-name {
+        width: 100px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    /*Poubelles / Garbage can*/
+    .poubelle {
+        width: 65px;
+        height: 65px;
+    }
+
+    .poubelle-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    /*Texte des résultats / Result text*/
+    
+    #result {
+        font-size: 15px;
+    }
+    
+    .result-detail {
+        width: 45%;
+        height: 80px;
+    }
+
+    .result-detail p {
+        font-size: 12px;
+        line-height: 5px;
+    }
+
+    /*Score final / Final score*/
+    #score-final {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    /*Bouton redémarrer / Restart button*/
+
+    #restart-btn {
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+}

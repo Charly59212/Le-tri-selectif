@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le tri Sélectif</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Bordure d'écran de jeu / Screen game border-->
+    <div id="design">
+        <!-----1er écran de jeu / First screen game----->
+        <div id="first-screen">
+            <div id="container">
+                <!-------Titre et sous-titre / Title & sub-tilte--------------->
+                <h1>Jeu de Tri des Déchets</h1>
+                <h2>Sélectionnez la bonne poubelle de tri pour le déchet à jeter :</h2>
+                <!--------Nom des déchets / Dechet name------------------>
+                <p id="dechets-name"></p>
+                <!--------Nom des poubelles / garbage can name---------------->
+                <div id="poubelles-name">
+                    <div>
+                        <!--------Poubelle n°1------------>
+                        <div class="poubelle" id="number1">
+                            <div class="poubelle-icon">
+                                <img src="icons/poubelle_icon.png" alt="Poubelle Jaune">
+                            </div>
+                        </div>
+                        <p id="choice">Poubelle Jaune</p>
+                    </div>
+                    <div>
+                        <!--------Poubelle n°2------------>
+                        <div class="poubelle" id="number2">
+                            <div class="poubelle-icon">
+                                <img src="icons/poubelle_icon.png" alt="Poubelle Verte">
+                            </div>
+                        </div>
+                        <p id="choice">Poubelle Verte</p>
+                    </div>
+                    <div>
+                        <!--------Poubelle n°3------------>
+                        <div class="poubelle" id="number3">
+                            <div class="poubelle-icon">
+                                <img src="icons/poubelle_icon.png" alt="Poubelle Bleue">
+                            </div>
+                        </div>
+                        <p id="choice">Poubelle Bleue</p>
+                    </div>
+                    <div>
+                        <!--------Poubelle n°4------------>
+                        <div class="poubelle" id="number4">
+                            <div class="poubelle-icon">
+                                <img src="icons/poubelle_icon.png" alt="Poubelle Marron">
+                            </div>
+                        </div>
+                        <p id="choice">Poubelle Marron</p>
+                    </div>
+                </div>
+            </div>
+            <!-------Affichage réponses - score du joueur / Display answer and gamer score-->
+            <p id="result"></p>
+            <p id="score"></p>
+        </div>
+    </div>
+
+        <!--Bordure d'écran de jeu / Screen game border-->
+    <div id="design">
+        <!------Seconde écran pour les résultats / Second screen result-->
+        <div id="second-screen">
+            <h1>Résultats</h1>
+            <div id="result-final"></div>
+            <p id="score-final"></p>
+            <!------Bouton nouvelle partie / New game button---------->
+            <button id="restart-btn">Recommencer</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
